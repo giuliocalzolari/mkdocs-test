@@ -1,10 +1,5 @@
 [
   {
-    "version": "main.x",
-    "title": "main.x",
-    "aliases": []
-  },
-  {
     "version": "latest",
     "title": "latest",
     "aliases": []

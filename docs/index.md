@@ -1,3 +1,3 @@
 # Welcome my docs
 
-Version is 1.0
+Version is MASTER

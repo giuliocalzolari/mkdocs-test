@@ -3,6 +3,7 @@ site_name: admin-docs
 site_description: Admin Guide.
 site_author: my Team
 
+site_url: https://giuliocalzolari.github.io/mkdocs-test/
 repo_url: https://github.com/giuliocalzolari/mkdocs-test
 edit_uri: blob/master/
 
@@ -13,6 +14,9 @@ theme:
   - navigation.tabs
   - navigation.indexes
   - navigation.expand
+  - navigation.instant
+  - content.action.edit
+  - search.suggest
 
 copyright: Copyright &copy; 2024 demo.
 

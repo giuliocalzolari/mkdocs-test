@@ -16,6 +16,12 @@ theme:
 
 copyright: Copyright &copy; 2024 demo.
 
+
+plugins:
+- search
+- git-revision-date-localized
+- git-authors
+
 extra:
   version:
     provider: mike

@@ -18,6 +18,7 @@ theme:
   - navigation.instant
   - content.action.edit
   - search.suggest
+  - toc.follow
 
 copyright: Copyright &copy; 2024 demo.
 

@@ -16,6 +16,9 @@ theme:
 
 copyright: Copyright &copy; 2024 demo.
 
+extra:
+  version:
+    provider: mike
 
 
 nav:

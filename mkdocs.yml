@@ -1,0 +1,49 @@
+site_name: admin-docs
+
+site_description: Admin Guide.
+site_author: my Team
+
+repo_url: https://github.com/giuliocalzolari/mkdocs-test
+edit_uri: blob/master/
+
+
+theme:
+  name: material
+  features:
+  - navigation.tabs
+  - navigation.indexes
+  - navigation.expand
+
+copyright: Copyright &copy; 2024 demo.
+
+
+
+nav:
+- Introduction:
+  - Introduction: index.md
+
+- Installation:
+  - Introduction: installation/intro.md
+  - Quick Starts:
+    - EKS: installation/quick-start-install-aws.md
+    - AKS: installation/quick-start-install-azure.md
+    - GKE: installation/quick-start-install-google.md
+    - Generic: installation/quick-start-install-generic.md
+  - Requirements:
+    - EKS: installation/requirements-aws.md
+    - AKS: installation/requirements-azure.md
+    - GKE: installation/requirements-google.md
+    - Generic: installation/requirements-generic.md
+  - Verification: installation/verification.md
+
+- Backup:
+  - Introduction: backup/intro.md
+  - Verification: backup/todo.md
+
+- Migration:
+  - Introduction: migration/intro.md
+  - Verification: migration/todo.md
+
+- Monitoring:
+  - Introduction: monitoring/intro.md
+  - Verification: monitoring/todo.md

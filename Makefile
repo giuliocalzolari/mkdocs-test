@@ -1,16 +1,35 @@
+# Variables
+VENV_DIR = venv
+PYTHON = python3
+PIP = $(VENV_DIR)/bin/pip
+ACTIVATE = $(VENV_DIR)/bin/activate
+
+
+# Create virtual environment
+venv:
+	$(PYTHON) -m venv $(VENV_DIR)
+
+# Install dependencies
+install: venv
+	$(PIP) install -r requirements.txt
+  source $(ACTIVATE)
+
+activate: install
+  source $(ACTIVATE)
+
+# Clean up virtual environment
+clean:
+	rm -rf $(VENV_DIR)
+
 # preview docs
-docs-preview: docs-dependencies
-	pipenv run mkdocs serve
+docs-preview: install
+	mkdocs serve
 
 # publish the versioned docs using mkdocs mike util
-docs-publish: docs-dependencies
-	pipenv run mike deploy --allow-empty --push --update-aliases $(TARGET)
-	pipenv run mike --allow-empty --push set-default latest
-
-# install dependencies needed to preview and publish docs
-docs-dependencies:
-	pipenv install --dev
+docs-publish: install
+	mike deploy --allow-empty --push --update-aliases $(TARGET)
+	mike --allow-empty --push set-default latest
 
 docs-test:
-	pipenv run mkdocs build --strict
+	mkdocs build --strict
 

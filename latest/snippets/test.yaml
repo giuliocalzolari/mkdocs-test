@@ -1,0 +1,6 @@
+apiVersion: test
+kind: Test
+metadata:
+  name: test
+spec:
+  foo: bar

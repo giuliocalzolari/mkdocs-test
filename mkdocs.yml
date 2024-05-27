@@ -26,6 +26,8 @@ plugins:
 - search
 - git-revision-date-localized
 - git-authors
+- macros:
+    include_dir: docs/snippets
 
 extra:
   version:

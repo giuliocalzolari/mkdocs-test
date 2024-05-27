@@ -32,7 +32,7 @@ jobs:
       - name: run
         run: |
             branch_name=${GITHUB_REF##*/}
-            if [[ "$branch_name" == "master" ]]; then
+            if [[ "$branch_name" == "main" ]]; then
                 export TARGET="latest"
             else
                 version=${branch_name#release/}

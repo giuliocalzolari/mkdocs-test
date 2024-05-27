@@ -28,7 +28,6 @@ docs-preview:
 # publish the versioned docs using mkdocs mike util
 docs-publish:
 	mike deploy --allow-empty --push --update-aliases $(TARGET)
-	mike --allow-empty --push set-default latest
 
 docs-test:
 	mkdocs build --strict

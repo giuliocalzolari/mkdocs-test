@@ -1,7 +1,6 @@
 # Variables
 VENV_DIR = venv
 PYTHON = python3
-PIP = $(VENV_DIR)/bin/pip
 ACTIVATE = $(VENV_DIR)/bin/activate
 
 
@@ -10,8 +9,8 @@ venv:
 	$(PYTHON) -m venv $(VENV_DIR)
 
 # Install dependencies
-install: venv
-	$(PIP) install -r requirements.txt
+install:
+	pip install -r requirements.txt
 
 # Activate virtual environment
 activate: install

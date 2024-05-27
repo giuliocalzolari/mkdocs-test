@@ -13,9 +13,9 @@ venv:
 install: venv
 	$(PIP) install -r requirements.txt
 
-# activate up virtual environment
+# Activate virtual environment
 activate: install
-  source $(ACTIVATE)
+	. $(ACTIVATE)
 
 # Clean up virtual environment
 clean:

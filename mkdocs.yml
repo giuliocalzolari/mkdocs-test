@@ -1,11 +1,12 @@
 site_name: admin-docs
 
-site_description: Admin Guide.
+site_description: Admin Guide
 site_author: my Team
 
 site_url: https://giuliocalzolari.github.io/mkdocs-test/
+repo_name: Admin Guide
 repo_url: https://github.com/giuliocalzolari/mkdocs-test
-edit_uri: blob/master/
+edit_uri: ./edit/main/docs/
 
 
 theme:

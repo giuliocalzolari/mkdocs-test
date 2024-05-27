@@ -3,3 +3,4 @@ mkdocs-material==9.5.25
 mike==2.1.1
 mkdocs-git-authors-plugin
 mkdocs-git-revision-date-localized-plugin
+mkdocs-macros-plugin

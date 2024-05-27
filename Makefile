@@ -22,11 +22,11 @@ clean:
 	rm -rf $(VENV_DIR)
 
 # preview docs
-docs-preview: install
+docs-preview:
 	mkdocs serve
 
 # publish the versioned docs using mkdocs mike util
-docs-publish: install
+docs-publish:
 	mike deploy --allow-empty --push --update-aliases $(TARGET)
 	mike --allow-empty --push set-default latest
 

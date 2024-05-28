@@ -1,3 +1,3 @@
 # Quick S Azure
 
-Use AKS 2
+Use AKS 3

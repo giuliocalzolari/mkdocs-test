@@ -55,6 +55,7 @@ nav:
 
 - Backup:
   - Introduction: backup/intro.md
+  - Image: backup/iamge.md
   - Verification: backup/todo.md
 
 - Migration:

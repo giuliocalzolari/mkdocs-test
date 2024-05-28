@@ -76,6 +76,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://giuliocalzolari.github.io/mkdocs-test/latest/monitoring/image/</loc>
+         <lastmod>2024-05-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://giuliocalzolari.github.io/mkdocs-test/latest/monitoring/intro/</loc>
          <lastmod>2024-05-28</lastmod>
          <changefreq>daily</changefreq>

@@ -1376,7 +1376,7 @@
 <p>The LBC is supported by AWS. Some clusters may be using the legacy "in-tree" functionality to provision AWS load balancers. The AWS Load Balancer Controller should be installed instead.</p>
 <p>!!!question "Existing AWS ALB Ingress Controller users"
     The AWS ALB Ingress controller must be uninstalled before installing the AWS Load Balancer Controller.
-    Please follow our <a href="upgrade/migrate_v1_v2.md">migration guide</a> to do a migration.</p>
+    Please follow our to do a migration.</p>
 <p>!!!warning "When using AWS Load Balancer Controller v2.5+"
     The AWS LBC provides a mutating webhook for service resources to set the <code>spec.loadBalancerClass</code> field for service of type LoadBalancer on create. 
     This makes the AWS LBC the <strong>default controller for service</strong> of type LoadBalancer. You can disable this feature and revert to set Cloud Controller Manager (in-tree controller) as the default by setting the helm chart value <strong>enableServiceMutatorWebhook to false</strong> with <code>--set enableServiceMutatorWebhook=false</code> . 

@@ -20,17 +20,18 @@ jobs:
   cherry_pick_release:
     runs-on: ubuntu-latest
     strategy:
-        matrix:
-          tag: ["1.0", "1.1", "2.0"]
+      matrix:
+        tag: ["1.0", "1.1", "2.0"]
     name: Cherry pick
-    if: contains(github.event.pull_request.labels.*.name, 'cherry-pick on merge into ${{ matrix.tag }}') && github.event.pull_request.merged == true
     steps:
       - name: Checkout
+        if: contains(github.event.pull_request.labels.*.name, 'cherry-pick on merge into ${{ matrix.tag }}') && github.event.pull_request.merged == true
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: cherry
+        if: contains(github.event.pull_request.labels.*.name, 'cherry-pick on merge into ${{ matrix.tag }}') && github.event.pull_request.merged == true
         run: |
             ./.github/scripts/cherry-pick.sh
         env:

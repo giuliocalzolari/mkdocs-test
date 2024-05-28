@@ -1,0 +1,67 @@
+name: cherry-pick
+on:
+  pull_request:
+    branches:
+      - master
+    types: ["closed"]
+
+
+permissions:
+  issues: write
+  contents: write
+  pull-requests: write
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  PR_ID: ${{ github.event.pull_request.number }}
+
+jobs:
+  cherry_pick_release_v1_0:
+    runs-on: ubuntu-latest
+    name: Cherry pick
+    if: ${{ contains(github.event.pull_request.labels.*.name, 'cherry-pick on merge into 1.0') && github.event.pull_request.merged == true }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: cherry
+        run: |
+            ./.github/scripts/cherry-pick.sh
+        env:
+          TARGET_BRANCH: release/1.0
+
+  cherry_pick_release_v1_1:
+    runs-on: ubuntu-latest
+    name: Cherry pick
+    if: ${{ contains(github.event.pull_request.labels.*.name, 'cherry-pick on merge into 1.1') && github.event.pull_request.merged == true }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: cherry
+        run: |
+            ./.github/scripts/cherry-pick.sh
+        env:
+          TARGET_BRANCH: release/1.1
+
+  cherry_pick_release_v2_0:
+    runs-on: ubuntu-latest
+    name: Cherry pick
+    if: ${{ contains(github.event.pull_request.labels.*.name, 'cherry-pick on merge into 2.0') && github.event.pull_request.merged == true }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: cherry
+        run: |
+            ./.github/scripts/cherry-pick.sh
+        env:
+          TARGET_BRANCH: release/2.0
+
+

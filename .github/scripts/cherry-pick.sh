@@ -15,12 +15,6 @@ git push -u origin $BRANCH_NAME
 echo "open PR"
 PR_TITLE="[cherry-pick] $(git log -1 --format="%s" ${GITHUB_SHA})"
 PR_MSG="Cherry picking #$PR_ID into [**$TARGET_BRANCH**] branch"
-
-curl -v -X POST \
-    -H "Authorization: token $GITHUB_TOKEN" \
-    -d '{"title": "'"$PR_TITLE"'", "body": "'"$PR_MSG"'", "head": "'"$BRANCH_NAME"'", "base": "'"$TARGET_BRANCH"'"}' \
-    "https://api.github.com/repos/$GITHUB_REPOSITORY/pulls"
-
 # Create a pull request
 PR_JSON=$(curl -s -X POST \
     -H "Authorization: token $GITHUB_TOKEN" \

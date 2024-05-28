@@ -6,7 +6,7 @@ The LBC is supported by AWS. Some clusters may be using the legacy "in-tree" fun
 
 !!!question "Existing AWS ALB Ingress Controller users"
     The AWS ALB Ingress controller must be uninstalled before installing the AWS Load Balancer Controller.
-    Please follow our [migration guide](upgrade/migrate_v1_v2.md) to do a migration.
+    Please follow our to do a migration.
     
 !!!warning "When using AWS Load Balancer Controller v2.5+"
     The AWS LBC provides a mutating webhook for service resources to set the `spec.loadBalancerClass` field for service of type LoadBalancer on create. 

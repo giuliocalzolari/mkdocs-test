@@ -63,4 +63,5 @@ nav:
 
 - Monitoring:
   - Introduction: monitoring/intro.md
+  - Image: monitoring/image.md
   - Verification: monitoring/todo.md
